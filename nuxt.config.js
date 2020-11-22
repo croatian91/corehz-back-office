@@ -37,7 +37,31 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: [
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: 'AIzaSyBybhpuqOt6I_wUUTAHYkpIk0W3LIEA_jI',
+          authDomain: 'corehz-workout-dev.firebaseapp.com',
+          databaseURL: 'https://corehz-workout-dev.firebaseio.com',
+          projectId: 'corehz-workout-dev',
+          storageBucket: 'corehz-workout-dev.appspot.com',
+          messagingSenderId: '153278202705',
+          appId: '1:153278202705:web:be13ff9a2ef695a9aac970',
+          measurementId: 'G-LMPWTR654N',
+        },
+        services: {
+          auth: {
+            initialize: {
+              onAuthStateChangedAction: 'onAuthStateChanged',
+              subscribeManually: false,
+            },
+          },
+        },
+      },
+    ],
+  ],
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {

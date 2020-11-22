@@ -11,5 +11,6 @@
         </footer>
       </blockquote>
     </v-col>
+    <v-btn @click="$fire.auth.signOut()"> Sign-out </v-btn>
   </v-row>
 </template>
