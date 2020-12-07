@@ -1,3 +1,5 @@
+import { vuexfireMutations } from 'vuexfire'
+
 export default {
   SET_AUTH_USER: (state, { authUser }) => {
     if (!authUser) {
@@ -8,4 +10,5 @@ export default {
       state.user = { uid, email, emailVerified }
     }
   },
+  ...vuexfireMutations,
 }

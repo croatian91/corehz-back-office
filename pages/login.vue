@@ -62,7 +62,6 @@
 import firebase from 'firebase/app'
 
 export default {
-  layout: 'login',
   data() {
     return {
       error: '',
