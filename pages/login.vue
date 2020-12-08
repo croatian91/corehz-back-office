@@ -34,13 +34,13 @@
       </v-row>
     </v-col>
 
-    <v-snackbar v-model="emailSent" color="green">
+    <v-snackbar v-model="emailSent" color="green" dark>
       An email has been sent to
       <b>{{ email }}</b
       >, please do checkout your inbox.
     </v-snackbar>
 
-    <v-snackbar v-model="snackbar" color="red" :timeout="-1">
+    <v-snackbar v-model="snackbar" color="red" :timeout="-1" dark>
       {{ error }}
 
       <template v-slot:action="{ attrs }">
@@ -62,6 +62,7 @@
 import firebase from 'firebase/app'
 
 export default {
+  layout: 'login',
   data() {
     return {
       error: '',
